@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html ng-app="app" ng-cloak>
+    <head>
+        <title>Rock, Paper, Scissors</title>
+        <!-- Compiled and minified CSS -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="dist/css/main.min.css">
+    </head>
+
+    <body ng-controller="MainController">
+        <div class="container-fluid">
+            <header class="main-header row">
+                <!-- Logo -->
+                <h1 class="col-12 text-center">
+                    Rock &ndash; Paper &ndash; Scissors
+                </h1>
+            </header>
+
+            <main class="col-12">
+                <!-- Winners notification section -->
+                <section class="notification-wrapper col-12">
+                    <p ng-class="{'fade-in': isDraw}">Draw</p>
+                    <p ng-class="{'fade-in': hasUserWon}">You won</p>
+                    <p ng-class="{'fade-in': hasCpuWon}">Computer won</p>
+                </section>
+                <!-- CPU and human hands images area -->
+                <div class="text-center users">
+                    <ul class="">
+                        <li class="col-6 text-center">
+                            <img ng-src="{{ img.cpuImg === '' && 'src/img/cpu_rock.png' || 'src/img/cpu_' + img.cpuImg + '.png' }}" ng-class="{'user-img-animated': cpuAnimation}" 
+                            class="img-cpu" alt="CPU hand">
+                        </li>
+
+                        <li class="col-6 text-center">
+                            <img ng-src="{{ img.userImg === '' && 'src/img/user_rock.png' || 'src/img/user_' + img.userImg + '.png' }}" ng-class="{'user-img-animated': userAnimation}" 
+                            class="img-user" alt="User hand">
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- User buttons area -->
+                <ul class="col-12 actions text-center">
+                    <li class="col-12 text-center" ng-repeat="choice in choices">
+                        <a ng-click="startGame(choice)">{{choice}}</a>                
+                    </li>
+                    <!-- Restart game-->
+                    <li class="restart-btn">
+                        <a ng-click="restart()">Restart</a>
+                    </li>
+                </ul>
+
+                <!-- Results table section -->
+                <section class="results-wrapper text-center">
+                    <header>
+                        <ul>
+                            <li>CPU</li>
+                            <li>Draw</li>
+                            <li>User</li>
+                        </ul>
+                    </header>
+                    <div>
+                        <ul>
+                            <li>{{scoreCpu}}</li>
+                            <li>{{scoreDraw}}</li>
+                            <li>{{scoreUser}}</li>
+                        </ul>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- Compiled and minified JavaScript -->
+        <!-- AngularJS -->
+        <script src="dist/js/libs/angular.min.js"></script>
+        <script src="dist/js/main.min.js"></script>
+    </body>
+</html>

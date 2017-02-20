@@ -1,0 +1,36 @@
+{
+  "name": "RockPaperScissors",
+  "version": "0.1.0",
+  "author": "Efi Iliadi",
+  "description": "Rock Paper Scissors Online Game",
+  "license": "MIT",
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "grunt": "^0.4.5",
+    "grunt-bowercopy": "^1.2.4",
+    "grunt-concat-css": "^0.3.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-jasmine": "^1.0.3",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-eslint": "^19.0.0",
+    "grunt-karma": "^2.0.0",
+    "grunt-scss-lint": "^0.5.0",
+    "jasmine": "^2.5.2",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.3.0",
+    "karma-coverage": "^1.1.1",
+    "karma-jasmine": "^1.0.2",
+    "karma-phantomjs-launcher": "^1.0.2",
+    "phantomjs-prebuilt": "^2.1.13"
+  },
+  "dependencies": {
+    "angular": "^1.5.8",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "matchdep": "^1.0.1"
+  }
+}
