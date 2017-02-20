@@ -1,4 +1,4 @@
-# Background
+# RPS Game
 The user is playing against the computer. The user has the option to select either rock, paper or scissors by clicking the appropriate button while computer makes a random selection.
 
 ## Background
